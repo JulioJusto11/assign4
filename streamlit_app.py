@@ -48,13 +48,13 @@ with tabs[3]:
     ax.plot(m_x, m_y, color="#F25022", linewidth=5, solid_capstyle="round")
     ax.plot(s_x, s_y, color="#7FBA00", linewidth=5, solid_capstyle="round")
     ax.plot(
-        f_vert_x, f_vert_y, color="00A4EF", linewidth=5, solid_capstyle="round"
+        f_vert_x, f_vert_y, color="#00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        f_top_x, f_top_y, color="00A4EF", linewidth=5, solid_capstyle="round"
+        f_top_x, f_top_y, color="#00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        f_mid_x, f_mid_y, color="00A4EF", linewidth=5, solid_capstyle="round"
+        f_mid_x, f_mid_y, color="#00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
         t_vert_x, t_vert_y, color="#FFB900", linewidth=5, solid_capstyle="round"
