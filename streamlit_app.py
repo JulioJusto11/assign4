@@ -1,6 +1,7 @@
 # Import necessary packages (Make sure to also include in "requirements.txt" in this repository.)
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Print Title for the App
 st.title("Microsoft Stock Data Dashboard by Julio Justo")
@@ -48,9 +49,6 @@ with tabs[3]:
     f_mid_x, f_mid_y = [2.5, 3.1], [0.5, 0.5]
     t_vert_x, t_vert_y = [4.2, 4.2], [0, 1]
     t_top_x, t_top_y = [3.7, 4.7], [1, 1]
-
-    # 2. Build the Matplotlib figure
-    import matplotlib.pyplot as plt
 
     fig, ax = plt.subplots(figsize=(8, 3))
 
