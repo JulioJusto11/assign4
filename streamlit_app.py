@@ -28,5 +28,55 @@ with tabs[2]:
 
 # Tab 4: Something New
 with tabs[3]:
-    st.subheader(f"Something New")
-    st.bar_chart(df['Volume'])
+    st.subheader("Something New")
+
+    # 1. Define the coordinates to draw the letters
+    # Format: (X-coordinates, Y-coordinates)
+    m_x, m_y = [0, 0, 0.5, 1, 1], [0, 1, 0.5, 1, 0]
+    s_x, s_y = [2, 1.2, 1, 1.2, 1.8, 2, 1.8, 1], [
+        0.1,
+        0,
+        0.2,
+        0.5,
+        0.5,
+        0.8,
+        1,
+        0.9,
+    ]
+    f_vert_x, f_vert_y = [2.5, 2.5], [0, 1]
+    f_top_x, f_top_y = [2.5, 3.3], [1, 1]
+    f_mid_x, f_mid_y = [2.5, 3.1], [0.5, 0.5]
+    t_vert_x, t_vert_y = [4.2, 4.2], [0, 1]
+    t_top_x, t_top_y = [3.7, 4.7], [1, 1]
+
+    # 2. Build the Matplotlib figure
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(figsize=(8, 3))
+
+    # Plot each letter line segment
+    ax.plot(m_x, m_y, color="#0078D4", linewidth=5, solid_capstyle="round")
+    ax.plot(s_x, s_y, color="#0078D4", linewidth=5, solid_capstyle="round")
+    ax.plot(
+        f_vert_x, f_vert_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+    )
+    ax.plot(
+        f_top_x, f_top_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+    )
+    ax.plot(
+        f_mid_x, f_mid_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+    )
+    ax.plot(
+        t_vert_x, t_vert_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+    )
+    ax.plot(
+        t_top_x, t_top_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+    )
+
+    # Styling boundaries and grid
+    ax.set_xlim(-0.5, 5.2)
+    ax.set_ylim(-0.2, 1.2)
+    ax.grid(True, linestyle="--", alpha=0.5)
+
+    # 3. Render inside the tab
+    st.pyplot(fig)
