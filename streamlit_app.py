@@ -27,23 +27,15 @@ with tabs[2]:
     st.subheader(f"Volume for MSFT")
     st.bar_chart(df['Volume'])
 
-# Tab 4: Something New
+# Tab 4: MSFT
 with tabs[3]:
-    st.subheader("Something New")
+    st.subheader("MSFT Logo")
 
     # 1. Define the coordinates to draw the letters
     # Format: (X-coordinates, Y-coordinates)
     m_x, m_y = [0, 0, 0.5, 1, 1], [0, 1, 0.5, 1, 0]
-    s_x, s_y = [2, 1.2, 1, 1.2, 1.8, 2, 1.8, 1], [
-        0.1,
-        0,
-        0.2,
-        0.5,
-        0.5,
-        0.8,
-        1,
-        0.9,
-    ]
+    s_x = [2, 1.2, 1, 1.2, 1.8, 2, 1.8, 1.2]
+    s_y = [0.9, 1, 0.8, 0.5, 0.5, 0.2, 0, 0.1]
     f_vert_x, f_vert_y = [2.5, 2.5], [0, 1]
     f_top_x, f_top_y = [2.5, 3.3], [1, 1]
     f_mid_x, f_mid_y = [2.5, 3.1], [0.5, 0.5]
@@ -53,22 +45,22 @@ with tabs[3]:
     fig, ax = plt.subplots(figsize=(8, 3))
 
     # Plot each letter line segment
-    ax.plot(m_x, m_y, color="#0078D4", linewidth=5, solid_capstyle="round")
-    ax.plot(s_x, s_y, color="#0078D4", linewidth=5, solid_capstyle="round")
+    ax.plot(m_x, m_y, color="#F25022", linewidth=5, solid_capstyle="round")
+    ax.plot(s_x, s_y, color="#7FBA00", linewidth=5, solid_capstyle="round")
     ax.plot(
-        f_vert_x, f_vert_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+        f_vert_x, f_vert_y, color="00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        f_top_x, f_top_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+        f_top_x, f_top_y, color="00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        f_mid_x, f_mid_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+        f_mid_x, f_mid_y, color="00A4EF", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        t_vert_x, t_vert_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+        t_vert_x, t_vert_y, color="#FFB900", linewidth=5, solid_capstyle="round"
     )
     ax.plot(
-        t_top_x, t_top_y, color="#0078D4", linewidth=5, solid_capstyle="round"
+        t_top_x, t_top_y, color="#FFB900", linewidth=5, solid_capstyle="round"
     )
 
     # Styling boundaries and grid
